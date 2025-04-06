@@ -6,40 +6,39 @@
         {
             while (true)
             {
-                
+
+
                 Console.Clear();
                 Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine("Olá, aqui iremos calcular a média ponderada de suas provas");
                 Console.WriteLine("--------------------------------------------------");
 
-                Console.WriteLine("Para começar, irei precisar das notas de sua prova:");
+                Console.WriteLine("Para começar, irei precisar das notas de suas provas:");
                 Console.WriteLine("----------------------------------------");
-                Console.WriteLine("digite a medida do raio do cilindro");
+                Console.WriteLine("digite a nota de sua primeira prova");
 
-                //var r = Convert.ToInt32(Console.ReadLine());
-                r = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("----------------------------------------");
-                Console.WriteLine("digite a medida da altura do cilindro ");
-
-                //var h = Convert.ToDecimal(Console.ReadLine());
-                h = Convert.ToInt32(Console.ReadLine());
-
+                double provaUm = Double.Parse(Console.ReadLine());
 
                 Console.WriteLine("----------------------------------------");
+                Console.WriteLine("digite a nota de sua segunda prova");
+
+
+                double provaDois = Double.Parse(Console.ReadLine());
+
+                Console.WriteLine("----------------------------------------");
+
+                double media = (provaUm * (50 / 100.0)) + (provaDois * (50 / 100.0));
 
 
 
-
-                var volume = Math.PI * Math.Pow(r, 2) * h;
-
-
-                Console.WriteLine($"Volume do cilindro é {volume:0.##}");
+                Console.WriteLine($"A sua nota ponderada é de {media:0.##}");
                 Console.Write("Deseja continuar? (S/N): ");
                 string opcaoContinuar = Console.ReadLine().ToUpper();
 
                 if (opcaoContinuar != "S")
                     break;
-            }
+            }    
+        }
     }
 }
